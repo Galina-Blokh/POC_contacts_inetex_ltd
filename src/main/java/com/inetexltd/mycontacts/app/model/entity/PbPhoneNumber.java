@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @AllArgsConstructor
@@ -15,5 +16,8 @@ import javax.persistence.Table;
 public class PbPhoneNumber extends PbSuperUser {
     @Column(name = "phone_number")
     private  String phoneNumber;
+
+    @ManyToOne
+    private PbUser user;
 
 }
