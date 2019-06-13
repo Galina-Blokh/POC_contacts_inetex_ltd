@@ -1,6 +1,6 @@
-package com.inetexltd.mycontacts.app.repository;
+package com.inetexltd.mycontacts.repository;
 
-import com.inetexltd.mycontacts.app.model.entity.Address;
+import com.inetexltd.mycontacts.model.entity.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AddressRepository extends JpaRepository<Address, Long> {

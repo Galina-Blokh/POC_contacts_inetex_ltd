@@ -1,10 +1,8 @@
-package com.inetexltd.mycontacts.app.model.entity;
+package com.inetexltd.mycontacts.model.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,6 +15,7 @@ public class PhoneNumber extends SuperEntity {
     private  String phoneNumber;
 
     @ManyToOne
+    @JoinColumn
     private User user;
 
 }

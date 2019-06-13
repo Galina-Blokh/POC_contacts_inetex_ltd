@@ -1,8 +1,9 @@
-package com.inetexltd.mycontacts.app.model.entity;
+package com.inetexltd.mycontacts.model.entity;
 
 import lombok.*;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,6 +24,7 @@ public class Address extends SuperEntity {
     private String apartment;
 
     @ManyToOne
+    @JoinColumn
     private User user;
 
 }

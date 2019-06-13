@@ -1,4 +1,4 @@
-package com.inetexltd.mycontacts.app.model.entity;
+package com.inetexltd.mycontacts.model.entity;
 
 import lombok.*;
 

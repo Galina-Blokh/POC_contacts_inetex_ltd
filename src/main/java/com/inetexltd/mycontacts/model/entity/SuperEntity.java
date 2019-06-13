@@ -1,6 +1,7 @@
-package com.inetexltd.mycontacts.app.model.entity;
+package com.inetexltd.mycontacts.model.entity;
 
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public abstract class SuperEntity {
     private Long id;
 
     @Column(name = "created_date")
+    @CreatedDate
     private LocalDate  createdDate;
 
 }
