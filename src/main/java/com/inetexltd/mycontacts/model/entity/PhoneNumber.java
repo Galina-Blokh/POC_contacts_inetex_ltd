@@ -3,7 +3,6 @@ package com.inetexltd.mycontacts.app.model.entity;
 import lombok.*;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -11,13 +10,13 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Getter @Setter
 @EqualsAndHashCode
-@Entity
+@javax.persistence.Entity
 @Table(name = "phoneNumbers")
-public class PbPhoneNumber extends PbSuperUser {
+public class PhoneNumber extends SuperEntity {
     @Column(name = "phone_number")
     private  String phoneNumber;
 
     @ManyToOne
-    private PbUser user;
+    private User user;
 
 }

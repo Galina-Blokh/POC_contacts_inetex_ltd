@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter @Setter
 @EqualsAndHashCode
-public abstract class PbSuperUser {
+public abstract class SuperEntity {
 
     @Column(name = "id")
     @Id
