@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
+@Builder
 @EqualsAndHashCode
 @Table(name = "addresses")
 public class Address extends SuperEntity {
