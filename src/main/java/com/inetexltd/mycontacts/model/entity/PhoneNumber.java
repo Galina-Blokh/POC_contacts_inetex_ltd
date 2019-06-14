@@ -8,7 +8,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter @Setter
 @EqualsAndHashCode
-@javax.persistence.Entity
+@Entity
 @Table(name = "phoneNumbers")
 public class PhoneNumber extends SuperEntity {
     @Column(name = "phone_number")

@@ -8,7 +8,6 @@ import java.time.LocalDate;
 
 @MappedSuperclass
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter @Setter
 @EqualsAndHashCode
 public abstract class SuperEntity {
