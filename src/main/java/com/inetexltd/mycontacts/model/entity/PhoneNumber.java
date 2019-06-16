@@ -1,12 +1,14 @@
 package com.inetexltd.mycontacts.model.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 @EqualsAndHashCode
 @Builder
 @Entity

@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @MappedSuperclass
 @NoArgsConstructor
 @Getter @Setter
-@EqualsAndHashCode
 public abstract class SuperEntity {
 
     @Column(name = "id")
