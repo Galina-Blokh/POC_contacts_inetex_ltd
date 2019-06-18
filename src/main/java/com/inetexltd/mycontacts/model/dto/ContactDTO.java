@@ -6,14 +6,16 @@ import com.inetexltd.mycontacts.model.entity.PhoneNumber;
 
 import lombok.*;
 
+import java.util.List;
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
 @Builder
 public class ContactDTO {
     private String fullName;
     private String email;
-    private PhoneNumber phoneNumbers [];
-    private AdressDTO address [];
+    private List<PhoneNumber> phoneNumbers;
+    private List<AddressDTO> address ;
 
 
 

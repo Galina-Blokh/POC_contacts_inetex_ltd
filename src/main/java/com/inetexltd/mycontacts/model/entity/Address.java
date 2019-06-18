@@ -2,12 +2,9 @@ package com.inetexltd.mycontacts.model.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@javax.persistence.Entity
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
