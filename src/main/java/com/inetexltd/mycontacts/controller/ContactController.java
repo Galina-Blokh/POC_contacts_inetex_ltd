@@ -17,18 +17,18 @@ public class ContactController {
 
 
     @PostMapping(value = "/addContact")
-    public void addContact(@PathVariable("id") Long id, @RequestBody ContactDTO contactDto) {
+    public void addContact(@RequestBody ContactDTO contactDto) {
         contactDTOService.addContact(contactDto);
     }
 
-    @GetMapping(value = "/getContactByName")
-     ContactDTO getContact(@PathVariable("fullName")String fullName){
-        return contactDTOService.getContactByName(fullName);
+    @GetMapping(value = "/getContactByName/{id}")
+     ContactDTO getContact(@PathVariable("fullName")String fullName, @PathVariable("id") Long id){
+        return contactDTOService.getContactByName(fullName, id);
     }
 
-    @GetMapping(value = "/getContactByPhone")
-    ContactDTO getContactByPhone(@PathVariable("phoneNumber") String phone){
-        return contactDTOService.getContactByPhone(phone);
+    @GetMapping(value = "/getContactByPhone/{id}")
+    ContactDTO getContactByPhone(@PathVariable("phoneNumber") String phone, @PathVariable("id") Long id){
+        return contactDTOService.getContactByPhone(phone, id);
     }
 
     @GetMapping(value = "/getAll")
@@ -36,18 +36,14 @@ public class ContactController {
         return contactDTOService.getAllContacts();
     }
 
-    @PostMapping(value = "/deleteByName")
-    void deleteContactByName(@PathVariable("fullName") String fullName){
-        contactDTOService.deleteContactByName(fullName);
+    @PostMapping(value = "/delete/{id}")
+    void deleteContact(@PathVariable("id") Long id){
+        contactDTOService.deleteContact(id);
     }
 
-    @PostMapping(value = "/deleteByPhone")
-    void deleteContactByPhone(@PathVariable("phoneNumber") String phoneNumber){
-        contactDTOService.deleteContactByPhone(phoneNumber);
-    }
-    @PostMapping(value = "/update")
-    void updateContact(@RequestBody ContactDTO contactDTO){
-        contactDTOService.updateContact(contactDTO);
+    @PostMapping(value = "/update/{id}")
+    void updateContact(@PathVariable("id") Long id,@RequestBody ContactDTO contactDTO){
+        contactDTOService.updateContact(id,contactDTO);
     }
 
 

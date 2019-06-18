@@ -23,36 +23,32 @@ public class ContactDTOService implements IContactDTOService{
 
     @Override
     public List<ContactDTO> getAllContacts() {
-        return  null;
-    }
-
-    @Override
-    public ContactDTO getContactByName(String fullname) {
         return null;
     }
 
     @Override
-    public ContactDTO getContactByPhone(String phoneNumber) {
+    public ContactDTO getContactByName(String fullName, Long id) {
+        return null;
+    }
+
+    @Override
+    public ContactDTO getContactByPhone(String phoneNumber, Long id) {
         return null;
     }
 
     @Override
     public void addContact(ContactDTO contactDTO) {
 
-    }
-
-    @Override
-    public void deleteContactByName(String fullName) {
 
     }
 
     @Override
-    public void deleteContactByPhone(String phoneNumber) {
+    public void deleteContact(Long id) {
 
     }
 
     @Override
-    public void updateContact(ContactDTO contactDTO) {
+    public void updateContact(Long id, ContactDTO contactDTO) {
 
     }
 }
