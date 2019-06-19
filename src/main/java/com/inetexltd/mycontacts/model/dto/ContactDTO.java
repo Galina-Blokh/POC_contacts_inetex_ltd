@@ -12,6 +12,7 @@ import java.util.List;
 @Getter @Setter
 @Builder
 public class ContactDTO {
+    private Long id;
     private String fullName;
     private String email;
     private List<PhoneNumber> phoneNumbers;

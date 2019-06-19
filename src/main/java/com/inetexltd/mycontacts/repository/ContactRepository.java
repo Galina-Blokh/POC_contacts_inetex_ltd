@@ -9,5 +9,5 @@ import java.util.List;
 public interface ContactRepository extends JpaRepository<ContactDTO, Long> {
     @Override
     List<ContactDTO> findAll();
-    List<ContactDTO> findByFullNameStartingWith(String fullName);
+
 }
