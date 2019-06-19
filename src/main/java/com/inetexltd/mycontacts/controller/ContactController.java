@@ -21,14 +21,9 @@ public class ContactController {
         contactDTOService.addContact(contactDto);
     }
 
-    @GetMapping(value = "/getContactByName/{id}")
-     ContactDTO getContact(@PathVariable("fullName")String fullName, @PathVariable("id") Long id){
-        return contactDTOService.getContactByName(fullName, id);
-    }
-
-    @GetMapping(value = "/getContactByPhone/{id}")
-    ContactDTO getContactByPhone(@PathVariable("phoneNumber") String phone, @PathVariable("id") Long id){
-        return contactDTOService.getContactByPhone(phone, id);
+    @GetMapping(value = "/getContact/{id}")
+     ContactDTO getContact(@PathVariable("id") Long id){
+        return contactDTOService.getContact(id);
     }
 
     @GetMapping(value = "/getAll")

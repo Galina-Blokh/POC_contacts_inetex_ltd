@@ -6,8 +6,7 @@ import java.util.List;
 
 public interface IContactDTOService {
      List<ContactDTO> getAllContacts();
-     ContactDTO getContactByName(String fullName, Long id);
-     ContactDTO getContactByPhone(String phoneNumber, Long id);
+     ContactDTO getContact(Long id);
      void addContact(ContactDTO contactDTO);
      void deleteContact(Long id);
      void updateContact(Long id, ContactDTO contactDTO);
