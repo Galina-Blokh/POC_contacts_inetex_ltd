@@ -15,7 +15,7 @@ public class ContactDTO {
     private Long id;
     private String fullName;
     private String email;
-    private List<PhoneNumber> phoneNumbers;
+    private List<PhoneDTO> phoneNumbers;
     private List<AddressDTO> address ;
 
 

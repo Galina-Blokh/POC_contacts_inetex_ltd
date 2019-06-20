@@ -1,11 +1,10 @@
 package com.inetexltd.mycontacts.service;
 
-import com.inetexltd.mycontacts.model.dto.AddressDTO;
+import com.inetexltd.mycontacts.exeptions.NotFoundRuntimeExeption;
 import com.inetexltd.mycontacts.model.dto.ContactDTO;
 import com.inetexltd.mycontacts.model.entity.Address;
 import com.inetexltd.mycontacts.model.entity.User;
 import com.inetexltd.mycontacts.repository.AddressRepository;
-import com.inetexltd.mycontacts.repository.ContactRepository;
 import com.inetexltd.mycontacts.repository.PhoneNumberRepository;
 import com.inetexltd.mycontacts.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +42,7 @@ public class ContactDTOService implements IContactDTOService{
     public ContactDTO getContact(Long id) {
         User user = userRepository
                     .findById(id)
-                    .orElseThrow(()-> new RuntimeException(id + "User doesn't exists"));
+                    .orElseThrow(()-> new NotFoundRuntimeExeption(id + "User doesn't exists"));
 
        //TODO
 
@@ -59,25 +58,31 @@ public class ContactDTOService implements IContactDTOService{
                 .build();
         userRepository.save(user);
         List<Address> addresses = Address.builder()
-                .country(AddressDTO.)
+                .country(contactDTO.)
+                .city()
+                .street()
+                .houseNumber()
+                .apartment()
+                .build();
+
 
 //TODO
 
     }
 
     @Override
+    @Transactional(readOnly = true)
     public void deleteContact(Long id) {
        User user = userRepository
                     .findById(id)
-                    .orElseThrow(()-> new RuntimeException(id + "User doesn't exists"));
+                    .orElseThrow(()-> new NotFoundRuntimeExeption(id + "User doesn't exists"));
        userRepository.deleteById(id);
        addressRepository.deleteById(id);
        phoneNumberRepository.deleteById(id);
-
-
     }
 
     @Override
+    @Transactional(readOnly = true)
     public void updateContact(Long id, ContactDTO contactDTO) {
 //TODO
     }

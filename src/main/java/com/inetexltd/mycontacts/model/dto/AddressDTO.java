@@ -7,12 +7,12 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-@EqualsAndHashCode
 @Builder
-public class AddressDTO extends Address {
+public class AddressDTO {
 
     private  String country;
     private  String city;
+    private String street;
     private String houseNumber;
     private String apartment;
 }
